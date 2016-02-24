@@ -19,18 +19,18 @@ set showmatch  " paren matching
 " Filetypes
 filetype indent on
 
+" Keyboard stuff
+let mapleader=","
+
 " Searching
 set incsearch
 set hlsearch
 nnoremap <leader><space> :nohlsearch<CR>
 
-" Keyboard stuff
-let mapleader=","
-
 " Plugins todo: ag.vim, ctrlp.vim, language-specific stuff
 
 " Color scheme
-source sprinkles.vim
+source ~/.vimrc.d/sprinkles.vim
 
 set encoding=utf8
 
@@ -48,3 +48,6 @@ set laststatus=2
 " Format the status line
 set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
 
+" Pathogen byundle manager
+source ~/.vimrc.d/pathogen.vim
+execute pathogen#infect()
