@@ -29,9 +29,6 @@ nnoremap <leader><space> :nohlsearch<CR>
 
 " Plugins todo: ag.vim, ctrlp.vim, language-specific stuff
 
-" Color scheme
-source ~/.vimrc.d/sprinkles.vim
-
 set encoding=utf8
 
 " Status line
@@ -51,3 +48,10 @@ set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ 
 " Pathogen byundle manager
 source ~/.vimrc.d/pathogen.vim
 execute pathogen#infect()
+
+set term=xterm
+set t_Co=256
+let &t_AB="\e[48;5;%dm"
+let &t_AF="\e[38;5;%dm"
+colorscheme lucius
+LuciusWhite
