@@ -1,13 +1,18 @@
-set runtimepath+=~/.vimrc.d
+set runtimepath+=~/.vim
+
+" Pathogen byundle manager
+source ~/.vim/pathogen.vim
+execute pathogen#infect()
 
 syntax enable
 
 " Tab/space stuff
 set tabstop=2
 set softtabstop=2
+set shiftwidth=2
 set expandtab
-set ai
-set si
+set autoindent
+set smartindent
 
 " UI Config
 set number
@@ -16,9 +21,6 @@ set showcmd
 set wildmenu   " visual autocomplete
 set showmatch  " paren matching
 
-" Filetypes
-filetype indent on
-
 " Keyboard stuff
 let mapleader=","
 
@@ -26,8 +28,6 @@ let mapleader=","
 set incsearch
 set hlsearch
 nnoremap <leader><space> :nohlsearch<CR>
-
-" Plugins todo: ag.vim, ctrlp.vim, language-specific stuff
 
 set encoding=utf8
 
@@ -43,11 +43,14 @@ endfunction
 set laststatus=2
 
 " Format the status line
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
+set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ L:%l\ C:%c
 
-" Pathogen byundle manager
-source ~/.vimrc.d/pathogen.vim
-execute pathogen#infect()
+" Filetypes
+filetype indent on
+filetype plugin on
+
+" OmniComplete
+set omnifunc=syntaxcomplete#Complete
 
 " Colors!
 set term=xterm

@@ -1,7 +1,7 @@
 My .vimrc
 
-Checkout as ~/.vimrc.d/ and 
+Checkout as ~/.vim/ and
 
-    source ~/.vimrc.d/main.vim
+    source ~/.vim/main.vim
 
 in ~/.vimrc
