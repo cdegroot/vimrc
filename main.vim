@@ -20,6 +20,7 @@ set showcmd
 "set cursorline
 set wildmenu   " visual autocomplete
 set showmatch  " paren matching
+set mouse=a
 
 " Keyboard stuff
 let mapleader=","
