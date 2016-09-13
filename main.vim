@@ -61,6 +61,12 @@ let &t_AF="\e[38;5;%dm"
 colorscheme lucius
 LuciusWhiteHighContrast
 
+" Elm
+let g:elm_format_autosave = 1
+let g:ycm_semantic_triggers = {
+    \ 'elm' : ['.'],
+    \}
+
 " Strip spaces on write
 fun! <SID>StripTrailingWhitespaces()
     let l = line(".")
