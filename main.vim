@@ -59,13 +59,17 @@ set t_Co=256
 let &t_AB="\e[48;5;%dm"
 let &t_AF="\e[38;5;%dm"
 colorscheme lucius
-LuciusWhiteHighContrast
+"LuciusWhiteHighContrast
+LuciusBlackHighContrast
 
 " Elm
 let g:elm_format_autosave = 1
 let g:ycm_semantic_triggers = {
     \ 'elm' : ['.'],
     \}
+
+" Dash
+:nmap <silent> <leader>d <Plug>DashSearch
 
 " Strip spaces on write
 fun! <SID>StripTrailingWhitespaces()
