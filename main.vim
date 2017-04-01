@@ -16,11 +16,11 @@ set smartindent
 
 " UI Config
 set number
-set showcmd
+""set showcmd
 "set cursorline
-set wildmenu   " visual autocomplete
-set showmatch  " paren matching
-set mouse=a
+""set wildmenu   " visual autocomplete
+""set showmatch  " paren matching
+""set mouse=a
 
 " Keyboard stuff
 let mapleader=","
@@ -41,10 +41,10 @@ function! HasPaste()
 endfunction
 
 " Always show the status line
-set laststatus=2
+""set laststatus=2
 
 " Format the status line
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ L:%l\ C:%c
+""set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ L:%l\ C:%c
 
 " Filetypes
 filetype indent on
@@ -56,11 +56,11 @@ set omnifunc=syntaxcomplete#Complete
 " Colors!
 set term=xterm
 set t_Co=256
-let &t_AB="\e[48;5;%dm"
-let &t_AF="\e[38;5;%dm"
+""let &t_AB="\e[48;5;%dm"
+""let &t_AF="\e[38;5;%dm"
 colorscheme lucius
-"LuciusWhiteHighContrast
-LuciusBlackHighContrast
+LuciusWhiteHighContrast
+"LuciusBlackHighContrast
 
 " Elm
 let g:elm_format_autosave = 1
